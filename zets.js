@@ -2594,7 +2594,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 //────────────────────[ MAIN MENU HOOOOOOHHH ]────────────────────
 
 case 'menu': case 'help': case 'menu': case 'allmenu': {                
-                buffer = await getBuffer(`https://telegra.ph/file/5b7dfa74a98f61347570e.jpg`)
+                buffer = await getBuffer(`https://telegra.ph/file/07e82d4a7bec7db6b3f3f.jpg`)
                 no = 1
                 anu = `Hai kak ${pushname}, have a nice day:)
                            
