@@ -28,8 +28,8 @@ const setting = JSON.parse(fs.readFileSync('./apikey.json'))
 
 //limit
 limitawal = '100'
-botname = 'ZETS - MD'
-wm = '© ZETS - MD'
+botname = 'Yann - Turu'
+wm = '© YannTuru 😎☝️'
 
 // read database
 let tebaklagu = db.data.game.tebaklagu = []
@@ -596,20 +596,20 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break
             case 'sc':  case 'sourcecode': {
 	        anu = `
-⌕ Script : https://github.com/Nando35/ZetsM
+⌕ Script : https://github.com/RyanStore/Zetspublic
 ⌕ Script ori : https://github.com/DikaArdnt/zets-Morou
 
 Jangan lupa kasih bintang.
-⌕ Donate : 628125284895 (Dana / gopay)
-⌕ Saweria : https://saweria.co/Nando35
-⌕ Paypal : https://www.paypal.me/Rifando35
+⌕ Donate : 6282350496532 (Dana / Pulsa)
+⌕ Toss Apk : https://toss.vn/s/rlqSFBzn
+⌕ Donasi Gk pake Duit Klik Link → : https://toss.vn/s/rlqSFBzn
 
 Dont Forget Donate
 `
 	                let btn = [{
                                 urlButton: {
                                     displayText: 'Instagram',
-                                    url: 'https://instagram.com/naando.jpeg'
+                                    url: 'https://instagram.com/ryannn.store'
                                 }
                             }]
                         zets.send5ButImg(m.chat, anu, botname, global.sc, btn)
@@ -634,7 +634,7 @@ Alya
 	                let btn = [{
                                 urlButton: {
                                     displayText: 'Instagram',
-                                    url: 'https://instagram.com/naando.jpeg'
+                                    url: 'https://instagram.com/ryannn.store'
                                 }
                             }]
                         zets.send5ButImg(m.chat, anu, botname, global.tq, btn)
@@ -938,7 +938,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
  
  ➲ *Pesan : ${q ? q : 'kosong'}*\n\n`
                 for (let mem of participants) {
-                teks += `⌕ @${mem.id.split('@')[0]}\n`
+                teks += `🗡️ @${mem.id.split('@')[0]}\n`
                 }
                 zets.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -1221,7 +1221,7 @@ break
                 }
             }
             break
-            case 'delete': case 'del': {
+            case 'delete': case 'del': case 'd': {
                 if (!m.quoted) throw false
                 let { chat, fromMe, id, isBaileys } = m.quoted
                 if (!isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
@@ -1239,8 +1239,8 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/zets-Morou'
+                                    displayText: 'REFERAL CODE (Dipakai Untuk Donasi Dan Sewa)',
+                                    url: 'https://toss.vn/s/rlqSFBzn'
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
@@ -1258,8 +1258,8 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/zets-Morou'
+                                    displayText: 'REFERAL CODE',
+                                    url: 'https://toss.vn/s/rlqSFBzn'
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
@@ -1349,7 +1349,7 @@ break
             m.reply(db)
         }
         break
-            case 'emojimix': {
+            case 'emojimix': case 'semojimix': case 'emix': {
 	        if (!text) throw `Example : ${prefix + command} 😅+🤔`
 		let [emoji1, emoji2] = text.split`+`
 		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
@@ -1359,7 +1359,7 @@ break
 		}
 	    }
 	    break
-            case 'toimage': case 'toimg': {
+            case 'toimage': case 'toimg': case 'togambar': {
                 if (!quoted) throw 'Reply Image'
                 if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
                 m.reply(mess.wait)
@@ -1478,7 +1478,7 @@ break
                 zets.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
             break
-        case 'google': {
+        case 'google': case 'g+': {
                 if (!text) throw `Example : ${prefix + command} fatih arridho`
                 let google = require('google-it')
                 google({'query': text}).then(res => {
@@ -1492,7 +1492,7 @@ break
                 })
                 }
                 break
-        case 'gimage': {
+        case 'gimage': case 'image': {
         if (!text) throw `Example : ${prefix + command} kaori cicak`
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
@@ -1535,8 +1535,8 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `${botname}`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Instagram',
-                                    url: 'https://instagram.com/alya.xzy'
+                                    displayText: 'REFERAL CODE',
+                                    url: 'https://toss.vn/s/rlqSFBzn'
                                }
                             }, {
                                 quickReplyButton: {
@@ -1601,7 +1601,7 @@ break
                 zets.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⌕ Title : ${media.title}\n⌕ File Size : ${media.filesizeF}\n⌕ Url : ${urls[text - 1]}\n⌕ Ext : MP3\n⌕ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
-            case 'pinterest': {
+            case 'pinterest': case 'pin': {
                 if (!text) throw `Example : ${prefix + command}`
                 m.reply(mess.wait)
 		        let { pinterest } = require('./lib/scraper')
@@ -1665,7 +1665,7 @@ break
                 zets.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'wikimedia': {
+            case 'wikimedia': case 'wiki': {
                 if (!text) throw 'Masukkan Query Title'
 		let { wikimedia } = require('./lib/scraper')
                 anu = await wikimedia(text)
@@ -2044,7 +2044,7 @@ break
 
 //────────────────────[ DOWNLOADER ]────────────────────
 
-            case 'tiktok': {
+            case 'tiktok': case 'tt': {
             if (!text) throw 'Masukkan Query Link!'
             m.reply(mess.wait)
             hx.ttdownloader(q).then( data => {
